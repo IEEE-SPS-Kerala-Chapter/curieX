@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <radialGradient id="badge-bg" cx="50%" cy="38%" r="65%">
+      <stop offset="0%" stop-color="#3D101E" />
+      <stop offset="100%" stop-color="#0C0C0C" />
+    </radialGradient>
+    <linearGradient id="queen-gold" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#C3B3AD" />
+      <stop offset="30%" stop-color="#B88A3B" />
+      <stop offset="100%" stop-color="#603D41" />
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="url(#badge-bg)" stroke="#B88A3B" stroke-opacity="0.45" stroke-width="1.5" />
+  <g fill="url(#queen-gold)" transform="translate(32, 32) scale(0.58) translate(-283, -48.1)">
+    <circle cx="283" cy="11" r="4.8" />
+    <path d="M263 18L271 31L277 16L283 31L289 16L295 31L303 18L297 38H269L263 18Z" />
+    <rect x="267" y="40" width="32" height="5" rx="2" />
+    <path d="M272 46.5C274 59 269 70 263 80H303C297 70 292 59 294 46.5H272Z" />
+    <rect x="260" y="82" width="46" height="8" rx="3" />
+  </g>
+</svg>
+
