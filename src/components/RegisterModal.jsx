@@ -2,10 +2,10 @@ import { useEffect, useImperativeHandle, useRef, useState } from 'react';
 import { closeTopLayer } from '../utils/topLayerAnimation.js';
 
 const TRACK_OPTIONS = [
-  { value: 'biomed', code: 'Track 01', title: 'Assistive & Biomedical Signals' },
-  { value: 'acoustic', code: 'Track 02', title: 'Acoustic & Speech Intelligence' },
-  { value: 'iot', code: 'Track 03', title: 'Smart Sensing & Edge IoT' },
-  { value: 'vision', code: 'Track 04', title: 'Open Innovation in DSP & Vision' },
+  { value: 'biomed', code: 'Arena I', title: 'Pulse of Asclepius (Biomedical)' },
+  { value: 'acoustic', code: 'Arena II', title: 'Resonance of Echo (Acoustic & Speech)' },
+  { value: 'iot', code: 'Arena III', title: 'Vigil of Argus (Smart Sensing & IoT)' },
+  { value: 'vision', code: 'Arena IV', title: 'Sight of the Owl & Helios (Vision & RF)' },
 ];
 
 const MODE_OPTIONS = [
@@ -221,7 +221,7 @@ export default function RegisterModal({ ref }) {
       <div className="dialog-shell">
         <header className="dialog-header">
           <div>
-            <p className="eyebrow eyebrow--gold dialog-eyebrow">CURIΣX DELEGATE PASS</p>
+            <p className="eyebrow eyebrow--gold dialog-eyebrow">AEGIS OF MINERVA • DELEGATE PASS</p>
             <h2 id="register-dialog-title">Register Your Seat</h2>
           </div>
           <button

@@ -7,41 +7,41 @@ const SPS_LOGO_ONLINE = 'https://www.ieeespskc.in/img/logo/sps%20kc%20png.png';
 
 const PILLARS = [
   {
-    num: 'I',
-    title: 'Learn from Experts',
+    num: 'I · SOPHIA',
+    title: 'Counsel of the Oracles',
     body: 'Interactive keynotes and technical masterclasses led by pioneering women researchers, IEEE SPS distinguished voices, and industry DSP architects.',
     tag: 'Keynotes & Fireside Dialogues',
   },
   {
-    num: 'II',
-    title: 'Explore New Technologies',
+    num: 'II · TECHNE',
+    title: 'The Sacred Forge',
     body: 'Dive hands-on into biomedical signal filtering, audio & speech ML, radar/RF sensing, and real-time embedded DSP pipelines.',
-    tag: 'Guided Technical Labs',
+    tag: 'Guided Lyceum Labs',
   },
   {
-    num: 'III',
-    title: 'Connect with Peers',
-    body: 'Build an enduring sisterhood in tech through curated networking circles, mentorship roundtables, and cross-campus peer cohorts.',
+    num: 'III · SYMMACHIA',
+    title: 'Sisterhood of the Aegis',
+    body: 'Build an enduring alliance in tech through curated networking circles, mentorship roundtables, and cross-campus peer cohorts.',
     tag: 'WISP Community Circles',
   },
   {
-    num: 'IV',
-    title: 'Work on Practical Ideas',
+    num: 'IV · PRAXIS',
+    title: 'Trial of the Strategoi',
     body: 'Form multidisciplinary teams during the Buildathon to tackle real-world problem statements and present functional solutions to our jury.',
-    tag: 'Day 2 Buildathon Sprint',
+    tag: 'Day II Buildathon Sprint',
   },
 ];
 
 const SCHEDULE_DAYS = {
   day1: {
     id: 'day1',
-    label: 'DAY 01',
-    sub: 'Signals, Workshops & Peer Circles',
+    label: 'DAY I · THE LYCEUM',
+    sub: 'Signals, Workshops & Peer Alliances',
     items: [
       {
         time: '09:00 AM',
-        title: 'Inauguration & WISP Opening Keynote',
-        desc: 'Welcome address by IEEE SPS Kerala Chapter & WISP leadership, setting the stage for women in signal processing.',
+        title: 'Invocation & WISP Opening Keynote',
+        desc: 'Welcome address by IEEE SPS Kerala Chapter & WISP leadership, raising the Aegis for women in signal processing.',
       },
       {
         time: '10:30 AM',
@@ -50,34 +50,34 @@ const SCHEDULE_DAYS = {
       },
       {
         time: '01:30 PM',
-        title: 'Hands-On DSP & Edge AI Workshop',
+        title: 'The Sacred Forge: DSP & Edge AI Lab',
         desc: 'Guided lab building live audio, biomedical, and sensor feature extraction pipelines using Python and embedded toolkits.',
       },
       {
         time: '03:45 PM',
-        title: 'Fireside Chat & Peer Networking Circle',
+        title: 'Symposium Fireside & Peer Agora',
         desc: 'Candid conversations on research careers, fellowships, and cross-college collaboration across Kerala.',
       },
       {
         time: '05:00 PM',
-        title: 'Problem Statement Reveal & Team Formation',
-        desc: 'Unveiling of the four Buildathon arenas, mentor pairing, and team matchmaking before Day 2 sprint kickoff.',
+        title: 'Oracle Reveal & Alliance Formation',
+        desc: 'Unveiling of the four Buildathon arenas, mentor pairing, and team matchmaking before Day II sprint kickoff.',
       },
     ],
   },
   day2: {
     id: 'day2',
-    label: 'DAY 02',
-    sub: 'The Curie X Buildathon & Grand Pitch',
+    label: 'DAY II · THE ARENA',
+    sub: 'The Curie X Buildathon & Laurel Pitch',
     items: [
       {
         time: '08:30 AM',
         title: 'Buildathon Kickoff & Architecture Sprint',
-        desc: 'Teams lock in their selected challenge, map signal acquisition or dataset strategies, and begin rapid prototyping.',
+        desc: 'Teams lock in their selected arena, map signal acquisition or dataset strategies, and begin rapid prototyping.',
       },
       {
         time: '11:30 AM',
-        title: 'Mentor Checkpoints & DSP Tuning',
+        title: 'Oracle Checkpoints & DSP Tuning',
         desc: 'One-on-one technical reviews with domain mentors to validate SNR performance, algorithm feasibility, and edge constraints.',
       },
       {
@@ -87,13 +87,13 @@ const SCHEDULE_DAYS = {
       },
       {
         time: '03:30 PM',
-        title: 'Final Signal Demos & Jury Evaluation',
+        title: 'Final Signal Demos & Jury Tribunals',
         desc: 'Live hardware/software demonstrations before an expert jury of IEEE SPS academics and industry engineers.',
       },
       {
         time: '05:30 PM',
-        title: 'Valedictory & Queen’s Crown Recognition',
-        desc: 'Announcement of Buildathon winners, special jury honors, and closing reflections from WISP Kerala.',
+        title: 'Valedictory & Laurel of Minerva',
+        desc: 'Announcement of Buildathon victors, special jury honors, and closing reflections from WISP Kerala.',
       },
     ],
   },
@@ -139,31 +139,31 @@ const CHECKER_MESSAGES = {
 const TRACKS = [
   {
     id: 'biomed',
-    code: 'TRACK 01',
-    title: 'Assistive & Biomedical Signals',
-    body: 'Design wearable vital-sign motion-artifact removal, non-invasive EEG/EMG gesture interfaces, or maternal health signal analytics.',
-    tag: 'ECG / EEG / PPG',
+    code: 'ARENA I · ASCLEPIUS',
+    title: 'Pulse of Asclepius',
+    body: 'Channel the healer’s art through wearable vital-sign motion-artifact removal, non-invasive EEG/EMG gesture interfaces, or maternal health signal analytics.',
+    tag: 'Biomedical • ECG / EEG / PPG',
   },
   {
     id: 'acoustic',
-    code: 'TRACK 02',
-    title: 'Acoustic & Speech Intelligence',
-    body: 'Build noise-resilient emergency keyword detection, real-time assistive hearing enhancement, or regional low-resource speech processing.',
-    tag: 'Audio DSP & ML',
+    code: 'ARENA II · ECHO',
+    title: 'Resonance of Echo',
+    body: 'Command the nymph of voice and sound with noise-resilient emergency keyword detection, real-time assistive hearing enhancement, or low-resource speech processing.',
+    tag: 'Acoustic & Speech AI',
   },
   {
     id: 'iot',
-    code: 'TRACK 03',
-    title: 'Smart Sensing & Edge IoT',
-    body: 'Engineer structural vibration anomaly detectors, environmental sensor-fusion nodes, or ultra-low-power safety telemetry systems.',
-    tag: 'Sensor Fusion',
+    code: 'ARENA III · ARGUS',
+    title: 'Vigil of Hundred-Eyed Argus',
+    body: 'Awaken the sleepless guardian via structural vibration anomaly detectors, environmental sensor-fusion nodes, or ultra-low-power safety telemetry systems.',
+    tag: 'Smart Sensing & Edge IoT',
   },
   {
     id: 'vision',
-    code: 'TRACK 04',
-    title: 'Open Innovation in DSP & Vision',
-    body: 'Tackle real-time image restoration, medical scan denoising, or millimeter-wave radar human-activity sensing.',
-    tag: 'Imaging & RF',
+    code: 'ARENA IV · HELIOS',
+    title: 'Sight of the Owl & Helios',
+    body: 'Harness radiant optics and Minerva’s nocturnal sight for real-time image restoration, medical scan denoising, or millimeter-wave radar human-activity sensing.',
+    tag: 'Vision, Imaging & RF',
   },
 ];
 
@@ -447,11 +447,11 @@ export default function App() {
 
           <div className="hero-statue-layer" aria-hidden="true">
             <img
-              src="/assets/hero-statue.png"
+              src="/assets/minerva-hero-bg.jpg"
               alt=""
               className="hero-statue-img"
               width="1200"
-              height="675"
+              height="900"
               fetchPriority="high"
             />
             <div className="hero-vignette"></div>
@@ -488,27 +488,31 @@ export default function App() {
                 />
               </svg>
 
-              <svg className="asterisk-emblem" viewBox="0 0 64 64" width="54" height="54" aria-hidden="true">
-                <g fill="#B3928D">
-                  <ellipse cx="32" cy="16" rx="5" ry="13" />
-                  <ellipse cx="32" cy="16" rx="5" ry="13" transform="rotate(60 32 32)" />
-                  <ellipse cx="32" cy="16" rx="5" ry="13" transform="rotate(120 32 32)" />
-                  <ellipse cx="32" cy="16" rx="5" ry="13" transform="rotate(180 32 32)" />
-                  <ellipse cx="32" cy="16" rx="5" ry="13" transform="rotate(240 32 32)" />
-                  <ellipse cx="32" cy="16" rx="5" ry="13" transform="rotate(300 32 32)" />
+              {/* Owl of Minerva & Olive Wreath Crest */}
+              <svg className="minerva-crest-emblem" viewBox="0 0 64 64" width="56" height="56" aria-hidden="true">
+                <g fill="none" stroke="#B88A3B" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M16 44C10 35 11 21 19 13" opacity="0.85" />
+                  <path d="M48 44C54 35 53 21 45 13" opacity="0.85" />
+                  <path d="M22 14L27 20H37L42 14" stroke="#C3B3AD" />
+                  <path d="M23 20C21 28 23 39 32 45C41 39 43 28 41 20" fill="rgba(61, 16, 30, 0.55)" />
+                  <circle cx="27.5" cy="24" r="3" stroke="#C3B3AD" />
+                  <circle cx="36.5" cy="24" r="3" stroke="#C3B3AD" />
+                  <path d="M32 26V29.5" />
+                  <path d="M26 32C28 35 36 35 38 32" opacity="0.8" />
+                  <path d="M24 49H40" stroke="#C3B3AD" />
                 </g>
               </svg>
 
               <h1 id="hero-title" className="hero-display">
-                <span className="hero-display__line">WHERE SIGNALS</span>
-                <span className="hero-display__line">SPARK STRATEGY.</span>
+                <span className="hero-display__line">Where wisdom</span>
+                <span className="hero-display__line"><em>commands the signal.</em></span>
               </h1>
             </div>
 
             <div className="hero-divider hero-stagger" style={{ '--stagger': 3 }} aria-hidden="true"></div>
 
             <p className="hero-tagline hero-stagger" style={{ '--stagger': 3 }}>
-              BORN FROM CURIOSITY. BUILT FOR WHAT’S NEXT.
+              UNDER THE AEGIS OF MINERVA • BORN FROM WISDOM. BUILT FOR WHAT’S NEXT.
             </p>
 
             <p className="hero-lead hero-stagger" style={{ '--stagger': 4 }}>
@@ -516,7 +520,7 @@ export default function App() {
               <a href="https://www.ieeespskc.in/" target="_blank" rel="noopener noreferrer" className="inline-link">
                 IEEE Signal Processing Society Kerala Chapter
               </a>{' '}
-              (WISP). Learn directly from domain experts, explore emerging Signal Processing technologies, connect with peers, and collaborate in teams to build working prototypes in our culminating Buildathon.
+              (WISP). Learn directly from domain experts, forge mastery in emerging Signal Processing technologies, unite with fellow strategists, and build working prototypes under the Aegis of our culminating Buildathon.
             </p>
 
             <div className="hero-actions hero-stagger" style={{ '--stagger': 5 }}>
@@ -529,10 +533,12 @@ export default function App() {
                 Register Your Spot
               </button>
               <a href="#buildathon" className="btn btn--secondary">
-                Explore the Buildathon
+                Enter the Buildathon
               </a>
             </div>
           </div>
+
+          <div className="greek-meander-frieze" aria-hidden="true"></div>
         </section>
 
         {/* ABOUT & MANIFESTO */}
@@ -540,41 +546,41 @@ export default function App() {
           <div className="container">
             <div className="editorial-split">
               <div className="editorial-lead reveal-card">
-                <p className="eyebrow">01 / THE VISION</p>
+                <p className="eyebrow">I / THE PANTHEON OF WISDOM</p>
                 <h2 id="about-heading" className="section-title">
-                  Curiosity Meets Tactical Precision.
+                  The Wisdom of Minerva. The Precision of Signals.
                 </h2>
                 <p className="lead-copy">
-                  Named in tribute to scientific trailblazer Marie Curie and anchored by the Queen’s crown in our emblem,{' '}
-                  <strong>CURIΣX</strong> empowers women technologists, researchers, and engineers across Kerala and beyond to take command of the signal processing frontier.
+                  Inspired by <strong>Minerva</strong>—Greek and Roman mythology’s goddess of wisdom, strategic warfare, mathematics, and inventive craft—and named in tribute to pioneer Marie Curie,{' '}
+                  <strong>CURIΣX</strong> summons women technologists and researchers across Kerala to command the signal processing frontier.
                 </p>
                 <p className="body-copy">
-                  Every modern breakthrough—from wearable diagnostics and assistive speech AI to radar sensing and edge intelligence—begins with decoding raw signals. Over two focused days, participants step out of passive lectures into active mentorship, experimental labs, and high-stakes collaborative engineering.
+                  Just as Minerva wove foresight into every triumph of techne and strategy, modern engineering breakthroughs—from biomedical telemetry and assistive speech AI to radar sensing—begin with decoding raw signals. Over two days in the Agora, initiates move beyond passive lectures into oracle mentorship, experimental labs, and collaborative prototyping.
                 </p>
               </div>
 
-              <aside className="editorial-manifesto reveal-card" aria-label="Program Highlights">
+              <aside className="editorial-manifesto reveal-card" aria-label="The Aegis Inscription">
                 <div className="manifesto-frame">
                   <p className="manifesto-quote">
                     “Nothing in life is to be feared, it is only to be understood. Now is the time to understand more, so that we may fear less.”
                   </p>
-                  <p className="manifesto-attribution">— Marie Skłodowska-Curie</p>
+                  <p className="manifesto-attribution">— Marie Skłodowska-Curie · Inscription of Athena</p>
                   <dl className="metrics-grid">
                     <div className="metric-item">
                       <dt>Duration</dt>
-                      <dd>2 Days</dd>
+                      <dd>II Days</dd>
                     </div>
                     <div className="metric-item">
                       <dt>Cohort</dt>
-                      <dd>100% Women-Only</dd>
+                      <dd>100% Women Cohort</dd>
                     </div>
                     <div className="metric-item">
-                      <dt>Sessions</dt>
-                      <dd>4+ Keynotes &amp; Labs</dd>
+                      <dt>Symposium</dt>
+                      <dd>IV+ Lyceum Labs</dd>
                     </div>
                     <div className="metric-item">
-                      <dt>Culmination</dt>
-                      <dd>12-Hr Buildathon</dd>
+                      <dt>The Trial</dt>
+                      <dd>XII-Hr Buildathon</dd>
                     </div>
                   </dl>
                 </div>
@@ -587,12 +593,12 @@ export default function App() {
         <section id="pillars" className="section section--pillars" aria-labelledby="pillars-heading">
           <div className="container">
             <header className="section-header">
-              <p className="eyebrow">02 / FOUR PILLARS OF CURIΣX</p>
+              <p className="eyebrow">II / THE FOUR TEMPLE PILLARS</p>
               <h2 id="pillars-heading" className="section-title">
-                From Deep Theory to Working Solutions
+                From Classical Intellect to Working Solutions
               </h2>
               <p className="section-subtitle">
-                Designed as an end-to-end journey from foundational signal mastery to live prototyping.
+                Designed as an end-to-end odyssey from foundational signal mastery to live prototyping.
               </p>
             </header>
 
@@ -621,9 +627,9 @@ export default function App() {
         <section id="schedule" className="section section--schedule" aria-labelledby="schedule-heading">
           <div className="container">
             <header className="section-header">
-              <p className="eyebrow">03 / TWO-DAY ITINERARY</p>
+              <p className="eyebrow">III / CHRONICLES OF THE AGORA</p>
               <h2 id="schedule-heading" className="section-title">
-                Designed for Discovery &amp; Execution
+                Two Days of Wisdom &amp; Strategic Execution
               </h2>
             </header>
 
@@ -755,44 +761,51 @@ export default function App() {
                       strokeDasharray="24 14 8 14"
                     />
                   </svg>
+                  {/* Minerva Corinthian Crest, Spear & Laurel Wreath SVG */}
                   <div className="buildathon-crown">
-                    <svg viewBox="0 0 64 96" width="60" height="90">
+                    <svg viewBox="0 0 80 96" width="70" height="86">
                       <defs>
                         <linearGradient id="crownGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
                           <stop offset="0%" stopColor="#C3B3AD" />
                           <stop offset="45%" stopColor="#B88A3B" />
-                          <stop offset="100%" stopColor="#603D41" />
+                          <stop offset="100%" stopColor="#7F122D" />
                         </linearGradient>
                       </defs>
-                      <circle cx="32" cy="10" r="5" fill="url(#crownGoldGrad)" />
-                      <path d="M10 18L19 33L26 15L32 33L38 15L45 33L54 18L47 42H17L10 18Z" fill="url(#crownGoldGrad)" />
-                      <rect x="15" y="44" width="34" height="5" rx="2" fill="url(#crownGoldGrad)" />
-                      <path d="M20 51C22 65 17 77 10 86H54C47 77 42 65 44 51H20Z" fill="url(#crownGoldGrad)" />
-                      <rect x="7" y="88" width="50" height="7" rx="3" fill="url(#crownGoldGrad)" />
+                      {/* Vertical Spear of Athena */}
+                      <path d="M40 4L44 16H36L40 4Z" fill="url(#crownGoldGrad)" />
+                      <line x1="40" y1="16" x2="40" y2="92" stroke="url(#crownGoldGrad)" strokeWidth="2.2" strokeLinecap="round" />
+                      {/* Laurel Wreath */}
+                      <path d="M18 68C10 56 10 38 19 25M62 68C70 56 70 38 61 25" fill="none" stroke="#B88A3B" strokeWidth="2.2" strokeLinecap="round" strokeDasharray="3 5" />
+                      {/* Aegis Shield */}
+                      <path d="M21 26H59V48C59 64 49 76 40 81C31 76 21 64 21 48V26Z" fill="rgba(17, 9, 13, 0.92)" stroke="url(#crownGoldGrad)" strokeWidth="2.4" />
+                      {/* Inner Corinthian Plume & Spear Motif */}
+                      <path d="M29 36C34 31 46 31 51 36" fill="none" stroke="#C3B3AD" strokeWidth="1.6" strokeLinecap="round" />
+                      <path d="M33 41H47V53C47 60 40 66 40 66C40 66 33 60 33 53V41Z" fill="rgba(184, 138, 59, 0.16)" stroke="#B88A3B" strokeWidth="1.5" />
+                      <path d="M40 41V65M35 49H45" stroke="#C3B3AD" strokeWidth="1.4" strokeLinecap="round" />
                     </svg>
                   </div>
                 </div>
 
                 <div className="buildathon-intro">
                   <div className="buildathon-eyebrow-row">
-                    <p className="eyebrow eyebrow--gold">04 / THE ENDGAME — CULMINATING BUILDATHON</p>
+                    <p className="eyebrow eyebrow--gold">IV / THE AEGIS TRIAL — CULMINATING BUILDATHON</p>
                     <span className="sprint-status-badge">
                       <span className="live-beacon" aria-hidden="true"></span>
-                      <span>12-HOUR PROTOTYPE SPRINT</span>
+                      <span>XII-HOUR PROTOTYPE SPRINT</span>
                     </span>
                   </div>
                   <h2 id="buildathon-heading" className="section-title">
-                    Form Teams. Decode Problems. Build What’s Next.
+                    Unite Under the Aegis. Decode the Unseen. Forge What’s Next.
                   </h2>
                   <p className="lead-copy">
-                    The climax of Curie X is an intensive practical Buildathon where participants form teams of{' '}
+                    The climax of Curie X is an intensive practical Buildathon where participants form alliances of{' '}
                     <strong>3 to 4 women</strong>, receive curated real-world challenges, and engineer working prototypes guided by IEEE SPS mentors.
                   </p>
                   <div className="buildathon-highlights">
-                    <div className="highlight-pill">Teams of 3–4 Participants</div>
-                    <div className="highlight-pill">Individual Matchmaking Available</div>
+                    <div className="highlight-pill">Alliances of 3–4 Women</div>
+                    <div className="highlight-pill">Oracle Matchmaking Available</div>
                     <div className="highlight-pill">Live Hardware &amp; Software Tracks</div>
-                    <div className="highlight-pill highlight-pill--gold">Grand Crown Awards &amp; Mentorship</div>
+                    <div className="highlight-pill highlight-pill--gold">Laurel Crown Awards &amp; Mentorship</div>
                   </div>
                 </div>
               </div>
@@ -801,7 +814,7 @@ export default function App() {
             <div className="rubric-grid">
               <div className="rubric-card reveal-card">
                 <div className="rubric-card__head">
-                  <h3>Judging Rubric</h3>
+                  <h3>The Scales of Minerva</h3>
                   <span className="rubric-weight-badge">100 PTS TOTAL</span>
                 </div>
                 <ul className="rubric-list">
@@ -840,9 +853,9 @@ export default function App() {
 
               <div className="rubric-card reveal-card">
                 <div className="rubric-card__head">
-                  <h3>Team &amp; Eligibility Check</h3>
+                  <h3>Oracle of Readiness</h3>
                 </div>
-                <p className="body-copy">Not sure if you need a team beforehand? Check your readiness:</p>
+                <p className="body-copy">Unsure if you need a squad before entering the Agora? Consult your path:</p>
                 <div className="checker-controls" role="group" aria-label="Team status check">
                   {[
                     { id: 'solo', label: 'Joining Solo' },
@@ -875,9 +888,9 @@ export default function App() {
         <section id="tracks" className="section section--tracks" aria-labelledby="tracks-heading">
           <div className="container">
             <header className="section-header">
-              <p className="eyebrow">05 / BUILDATHON PROBLEM ARENAS</p>
+              <p className="eyebrow">V / THE FOUR ARENAS OF MINERVA</p>
               <h2 id="tracks-heading" className="section-title">
-                Four Domains of Signal Innovation
+                Four Sanctums of Signal Craft
               </h2>
             </header>
 
@@ -906,9 +919,9 @@ export default function App() {
         <section id="faq" className="section section--faq" aria-labelledby="faq-heading">
           <div className="container faq-container">
             <header className="section-header">
-              <p className="eyebrow">06 / FREQUENTLY ASKED QUESTIONS</p>
+              <p className="eyebrow">VI / SCROLLS OF INQUIRY</p>
               <h2 id="faq-heading" className="section-title">
-                Everything You Need to Know
+                Counsel for Prospective Initiates
               </h2>
             </header>
 
@@ -963,7 +976,7 @@ export default function App() {
                   />
                 </a>
               </div>
-              <p className="footer-tagline">BORN FROM CURIOSITY. BUILT FOR WHAT’S NEXT.</p>
+              <p className="footer-tagline">UNDER THE AEGIS OF MINERVA • BORN FROM WISDOM. BUILT FOR WHAT’S NEXT.</p>
               <p className="footer-org">
                 Organized by{' '}
                 <a href="https://www.ieeespskc.in/" target="_blank" rel="noopener noreferrer" className="inline-link">

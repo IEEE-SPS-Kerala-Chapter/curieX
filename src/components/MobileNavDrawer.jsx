@@ -2,13 +2,15 @@ import { useEffect, useImperativeHandle, useRef } from 'react';
 import CuriexLogo from './CuriexLogo.jsx';
 import { closeTopLayer } from '../utils/topLayerAnimation.js';
 
+const ROMAN_NUMERALS = ['I', 'II', 'III', 'IV', 'V', 'VI'];
+
 const SECTION_LINKS = [
   { href: '#about', label: 'Overview' },
-  { href: '#pillars', label: 'Program Pillars' },
-  { href: '#schedule', label: 'Itinerary' },
-  { href: '#buildathon', label: 'Buildathon' },
-  { href: '#tracks', label: 'Problem Arenas' },
-  { href: '#faq', label: 'FAQ' },
+  { href: '#pillars', label: 'Temple Pillars' },
+  { href: '#schedule', label: 'Agora Itinerary' },
+  { href: '#buildathon', label: 'Aegis Trial' },
+  { href: '#tracks', label: 'Four Arenas' },
+  { href: '#faq', label: 'Scrolls of Inquiry' },
 ];
 
 const EXTERNAL_LINKS = [
@@ -118,7 +120,7 @@ export default function MobileNavDrawer({ ref, onOpenRegister, onOpenChange }) {
             {SECTION_LINKS.map((item, idx) => (
               <li key={item.href} style={{ '--item-idx': idx }}>
                 <a href={item.href} onClick={handleLinkClick}>
-                  <span className="mobile-drawer__idx">{String(idx + 1).padStart(2, '0')}</span>
+                  <span className="mobile-drawer__idx">{ROMAN_NUMERALS[idx] || String(idx + 1)}</span>
                   <span>{item.label}</span>
                 </a>
               </li>
