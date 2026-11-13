@@ -2,15 +2,15 @@ import { useEffect, useImperativeHandle, useRef, useState } from 'react';
 import { closeTopLayer } from '../utils/topLayerAnimation.js';
 
 const TRACK_OPTIONS = [
-  { value: 'biomed', code: '01', title: 'Biomedical Signals', domain: 'ECG / EEG / PPG' },
-  { value: 'acoustic', code: '02', title: 'Acoustic & Speech AI', domain: 'Audio DSP & ML' },
-  { value: 'iot', code: '03', title: 'Smart Sensing & IoT', domain: 'Sensor Fusion' },
-  { value: 'vision', code: '04', title: 'Open DSP & Vision', domain: 'Imaging & RF' },
+  { value: 'biomed', code: 'Track 01', title: 'Assistive & Biomedical Signals' },
+  { value: 'acoustic', code: 'Track 02', title: 'Acoustic & Speech Intelligence' },
+  { value: 'iot', code: 'Track 03', title: 'Smart Sensing & Edge IoT' },
+  { value: 'vision', code: 'Track 04', title: 'Open Innovation in DSP & Vision' },
 ];
 
 const MODE_OPTIONS = [
-  { value: 'individual', title: 'Individual Entry', subtitle: 'Day 1 squad matchmaking' },
-  { value: 'team', title: 'Team of 3–4', subtitle: 'Register with team name' },
+  { value: 'individual', label: 'Individual' },
+  { value: 'team', label: 'Team (3–4)' },
 ];
 
 const INITIAL_FORM = {
@@ -220,27 +220,9 @@ export default function RegisterModal({ ref }) {
     >
       <div className="dialog-shell">
         <header className="dialog-header">
-          <div className="dialog-header__brand">
-            <span className="dialog-emblem" aria-hidden="true">
-              <svg viewBox="0 0 36 48" width="20" height="26">
-                <defs>
-                  <linearGradient id="modalQueenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" stopColor="#C3B3AD" />
-                    <stop offset="40%" stopColor="#B88A3B" />
-                    <stop offset="100%" stopColor="#603D41" />
-                  </linearGradient>
-                </defs>
-                <circle cx="18" cy="5" r="2.6" fill="url(#modalQueenGrad)" />
-                <path d="M7 9L12 17L15 8L18 17L21 8L24 17L29 9L25 22H11L7 9Z" fill="url(#modalQueenGrad)" />
-                <rect x="9" y="23.5" width="18" height="3" rx="1.5" fill="url(#modalQueenGrad)" />
-                <path d="M12 27.5C13 34 10 39 7 43H29C26 39 23 34 24 27.5H12Z" fill="url(#modalQueenGrad)" />
-                <rect x="5.5" y="44" width="25" height="3.5" rx="1.5" fill="url(#modalQueenGrad)" />
-              </svg>
-            </span>
-            <div>
-              <p className="eyebrow eyebrow--gold dialog-eyebrow">WOMEN-ONLY COHORT • IEEE SPS KERALA</p>
-              <h2 id="register-dialog-title">Register for CURIΣX</h2>
-            </div>
+          <div>
+            <p className="eyebrow eyebrow--gold dialog-eyebrow">CURIΣX DELEGATE PASS</p>
+            <h2 id="register-dialog-title">Register Your Seat</h2>
           </div>
           <button
             type="button"
@@ -271,129 +253,100 @@ export default function RegisterModal({ ref }) {
             noValidate
           >
             <div className="dialog-body">
-              <div className="form-section">
-                <div className="form-grid">
-                  <div className="form-row">
-                    <label htmlFor="reg-name">
-                      Full Name <span className="req-mark" aria-hidden="true">*</span>
-                    </label>
-                    <input
-                      type="text"
-                      id="reg-name"
-                      name="name"
-                      autoComplete="name"
-                      enterKeyHint="next"
-                      required
-                      minLength={2}
-                      placeholder="e.g., Ananya Nair"
-                      aria-invalid={errors.name ? 'true' : undefined}
-                      aria-describedby={errors.name ? 'reg-name-err' : undefined}
-                      value={form.name}
-                      onChange={updateField('name')}
-                      onBlur={handleBlur('name')}
-                    />
-                    {errors.name && (
-                      <span id="reg-name-err" className="field-error" role="alert">
-                        {errors.name}
-                      </span>
-                    )}
-                  </div>
+              <div className="form-row">
+                <label htmlFor="reg-name">
+                  Full Name <span className="req-mark" aria-hidden="true">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="reg-name"
+                  name="name"
+                  autoComplete="name"
+                  enterKeyHint="next"
+                  required
+                  minLength={2}
+                  placeholder="e.g., Ananya Nair"
+                  aria-invalid={errors.name ? 'true' : undefined}
+                  aria-describedby={errors.name ? 'reg-name-err' : undefined}
+                  value={form.name}
+                  onChange={updateField('name')}
+                  onBlur={handleBlur('name')}
+                />
+                {errors.name && (
+                  <span id="reg-name-err" className="field-error" role="alert">
+                    {errors.name}
+                  </span>
+                )}
+              </div>
 
-                  <div className="form-row">
-                    <label htmlFor="reg-email">
-                      Email Address <span className="req-mark" aria-hidden="true">*</span>
-                    </label>
-                    <input
-                      type="email"
-                      id="reg-email"
-                      name="email"
-                      inputMode="email"
-                      autoComplete="email"
-                      autoCorrect="off"
-                      autoCapitalize="none"
-                      spellCheck={false}
-                      enterKeyHint="next"
-                      required
-                      placeholder="ananya@college.edu"
-                      aria-invalid={errors.email ? 'true' : undefined}
-                      aria-describedby={errors.email ? 'reg-email-err' : undefined}
-                      value={form.email}
-                      onChange={updateField('email')}
-                      onBlur={handleBlur('email')}
-                    />
-                    {errors.email && (
-                      <span id="reg-email-err" className="field-error" role="alert">
-                        {errors.email}
-                      </span>
-                    )}
-                  </div>
-                </div>
-
-                <div className="form-grid">
-                  <div className="form-row">
-                    <label htmlFor="reg-phone">
-                      Phone (WhatsApp) <span className="req-mark" aria-hidden="true">*</span>
-                    </label>
-                    <input
-                      type="tel"
-                      id="reg-phone"
-                      name="phone"
-                      inputMode="tel"
-                      autoComplete="tel"
-                      enterKeyHint="next"
-                      required
-                      placeholder="+91 98765 43210"
-                      aria-invalid={errors.phone ? 'true' : undefined}
-                      aria-describedby={errors.phone ? 'reg-phone-err' : undefined}
-                      value={form.phone}
-                      onChange={updateField('phone')}
-                      onBlur={handleBlur('phone')}
-                    />
-                    {errors.phone && (
-                      <span id="reg-phone-err" className="field-error" role="alert">
-                        {errors.phone}
-                      </span>
-                    )}
-                  </div>
-
-                  <div className="form-row">
-                    <label htmlFor="reg-ieee">
-                      IEEE Member ID <span className="optional">(Optional)</span>
-                    </label>
-                    <input
-                      type="text"
-                      id="reg-ieee"
-                      name="ieeeId"
-                      inputMode="numeric"
-                      autoCorrect="off"
-                      autoCapitalize="none"
-                      spellCheck={false}
-                      enterKeyHint="next"
-                      placeholder="e.g., 98765432"
-                      aria-invalid={errors.ieeeId ? 'true' : undefined}
-                      aria-describedby={errors.ieeeId ? 'reg-ieee-err' : undefined}
-                      value={form.ieeeId}
-                      onChange={updateField('ieeeId')}
-                      onBlur={handleBlur('ieeeId')}
-                    />
-                    {errors.ieeeId && (
-                      <span id="reg-ieee-err" className="field-error" role="alert">
-                        {errors.ieeeId}
-                      </span>
-                    )}
-                  </div>
+              <div className="form-grid">
+                <div className="form-row">
+                  <label htmlFor="reg-email">
+                    Email Address <span className="req-mark" aria-hidden="true">*</span>
+                  </label>
+                  <input
+                    type="email"
+                    id="reg-email"
+                    name="email"
+                    inputMode="email"
+                    autoComplete="email"
+                    autoCorrect="off"
+                    autoCapitalize="none"
+                    spellCheck={false}
+                    enterKeyHint="next"
+                    required
+                    placeholder="ananya@college.edu"
+                    aria-invalid={errors.email ? 'true' : undefined}
+                    aria-describedby={errors.email ? 'reg-email-err' : undefined}
+                    value={form.email}
+                    onChange={updateField('email')}
+                    onBlur={handleBlur('email')}
+                  />
+                  {errors.email && (
+                    <span id="reg-email-err" className="field-error" role="alert">
+                      {errors.email}
+                    </span>
+                  )}
                 </div>
 
                 <div className="form-row">
+                  <label htmlFor="reg-phone">
+                    Phone (WhatsApp) <span className="req-mark" aria-hidden="true">*</span>
+                  </label>
+                  <input
+                    type="tel"
+                    id="reg-phone"
+                    name="phone"
+                    inputMode="tel"
+                    autoComplete="tel"
+                    enterKeyHint="next"
+                    required
+                    placeholder="+91 98765 43210"
+                    aria-invalid={errors.phone ? 'true' : undefined}
+                    aria-describedby={errors.phone ? 'reg-phone-err' : undefined}
+                    value={form.phone}
+                    onChange={updateField('phone')}
+                    onBlur={handleBlur('phone')}
+                  />
+                  {errors.phone && (
+                    <span id="reg-phone-err" className="field-error" role="alert">
+                      {errors.phone}
+                    </span>
+                  )}
+                </div>
+              </div>
+
+              <div className="form-grid">
+                <div className="form-row">
                   <label htmlFor="reg-institution">
-                    Institution / Organization <span className="req-mark" aria-hidden="true">*</span>
+                    Institution / College <span className="req-mark" aria-hidden="true">*</span>
                   </label>
                   <input
                     type="text"
                     id="reg-institution"
                     name="institution"
                     autoComplete="organization"
-                    enterKeyHint="done"
+                    enterKeyHint="next"
                     required
                     placeholder="College or Organization"
                     aria-invalid={errors.institution ? 'true' : undefined}
@@ -408,101 +361,102 @@ export default function RegisterModal({ ref }) {
                     </span>
                   )}
                 </div>
+
+                <div className="form-row">
+                  <label htmlFor="reg-ieee">
+                    IEEE ID <span className="optional">(Optional)</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="reg-ieee"
+                    name="ieeeId"
+                    inputMode="numeric"
+                    autoCorrect="off"
+                    autoCapitalize="none"
+                    spellCheck={false}
+                    enterKeyHint="done"
+                    placeholder="e.g., 98765432"
+                    aria-invalid={errors.ieeeId ? 'true' : undefined}
+                    aria-describedby={errors.ieeeId ? 'reg-ieee-err' : undefined}
+                    value={form.ieeeId}
+                    onChange={updateField('ieeeId')}
+                    onBlur={handleBlur('ieeeId')}
+                  />
+                  {errors.ieeeId && (
+                    <span id="reg-ieee-err" className="field-error" role="alert">
+                      {errors.ieeeId}
+                    </span>
+                  )}
+                </div>
               </div>
 
-              <fieldset className="form-section form-fieldset">
-                <legend className="form-label">Participation Mode</legend>
-                <div className="mode-segment">
-                  {MODE_OPTIONS.map((opt) => {
-                    const checked = form.mode === opt.value;
-                    return (
-                      <label key={opt.value} className="radio-card radio-card--mode">
+              <div className="form-grid">
+                <div className="form-row">
+                  <span className="form-label-text" id="reg-mode-label">Participation</span>
+                  <div className="mode-pill-group" role="radiogroup" aria-labelledby="reg-mode-label">
+                    {MODE_OPTIONS.map((opt) => (
+                      <label key={opt.value} className="mode-pill">
                         <input
                           type="radio"
                           name="mode"
                           value={opt.value}
-                          checked={checked}
+                          checked={form.mode === opt.value}
                           onChange={updateField('mode')}
                         />
-                        <span className="radio-card__indicator" aria-hidden="true"></span>
-                        <span className="radio-card__body">
-                          <span className="radio-card__title">{opt.title}</span>
-                          <span className="radio-card__sub">{opt.subtitle}</span>
-                        </span>
+                        <span>{opt.label}</span>
                       </label>
-                    );
-                  })}
-                </div>
-
-                {form.mode === 'team' && (
-                  <div className="form-row form-row--reveal">
-                    <label htmlFor="reg-team-name">
-                      Team Name <span className="req-mark" aria-hidden="true">*</span>
-                    </label>
-                    <input
-                      type="text"
-                      id="reg-team-name"
-                      name="teamName"
-                      enterKeyHint="done"
-                      required
-                      minLength={2}
-                      placeholder="e.g., Fourier Queens"
-                      aria-invalid={errors.teamName ? 'true' : undefined}
-                      aria-describedby={errors.teamName ? 'reg-team-err' : undefined}
-                      value={form.teamName}
-                      onChange={updateField('teamName')}
-                      onBlur={handleBlur('teamName')}
-                    />
-                    {errors.teamName && (
-                      <span id="reg-team-err" className="field-error" role="alert">
-                        {errors.teamName}
-                      </span>
-                    )}
+                    ))}
                   </div>
-                )}
-              </fieldset>
-
-              <fieldset className="form-section form-fieldset">
-                <legend className="form-label">Preferred Buildathon Track</legend>
-                <div className="radio-card-grid radio-card-grid--tracks">
-                  {TRACK_OPTIONS.map((opt) => {
-                    const checked = form.track === opt.value;
-                    return (
-                      <label key={opt.value} className="radio-card radio-card--track">
-                        <input
-                          type="radio"
-                          name="track"
-                          value={opt.value}
-                          checked={checked}
-                          onChange={updateField('track')}
-                        />
-                        <span className="radio-card__badge" aria-hidden="true">{opt.code}</span>
-                        <span className="radio-card__body">
-                          <span className="radio-card__title">{opt.title}</span>
-                          <span className="radio-card__sub">{opt.domain}</span>
-                        </span>
-                      </label>
-                    );
-                  })}
                 </div>
-              </fieldset>
-            </div>
 
-            <footer className="dialog-footer">
-              <span className="dialog-footer__note">2-Day Pass • Day 2 Buildathon</span>
-              <div className="dialog-footer__actions">
-                <button
-                  type="button"
-                  className="btn btn--secondary"
-                  onClick={() => closeTopLayer(dialogRef.current, 'cancel')}
-                >
-                  Cancel
-                </button>
-                <button type="submit" className="btn btn--primary" disabled={isSubmitting}>
-                  Confirm Registration
-                </button>
+                <div className="form-row">
+                  <label htmlFor="reg-track">Preferred Track</label>
+                  <select
+                    id="reg-track"
+                    name="track"
+                    value={form.track}
+                    onChange={updateField('track')}
+                  >
+                    {TRACK_OPTIONS.map((opt) => (
+                      <option key={opt.value} value={opt.value}>
+                        {opt.code} — {opt.title}
+                      </option>
+                    ))}
+                  </select>
+                </div>
               </div>
-            </footer>
+
+              {form.mode === 'team' && (
+                <div className="form-row form-row--reveal">
+                  <label htmlFor="reg-team-name">
+                    Team Name <span className="req-mark" aria-hidden="true">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="reg-team-name"
+                    name="teamName"
+                    enterKeyHint="done"
+                    required
+                    minLength={2}
+                    placeholder="e.g., Fourier Queens"
+                    aria-invalid={errors.teamName ? 'true' : undefined}
+                    aria-describedby={errors.teamName ? 'reg-team-err' : undefined}
+                    value={form.teamName}
+                    onChange={updateField('teamName')}
+                    onBlur={handleBlur('teamName')}
+                  />
+                  {errors.teamName && (
+                    <span id="reg-team-err" className="field-error" role="alert">
+                      {errors.teamName}
+                    </span>
+                  )}
+                </div>
+              )}
+
+              <button type="submit" className="btn btn--primary dialog-submit" disabled={isSubmitting}>
+                Confirm Registration
+              </button>
+            </div>
           </form>
         ) : (
           <div className="dialog-body register-confirmation panel-enter" role="status" aria-live="polite">
@@ -543,7 +497,7 @@ export default function RegisterModal({ ref }) {
                 <div>
                   <dt>Preferred Track</dt>
                   <dd>
-                    Track {submittedData.trackObj.code} — {submittedData.trackObj.title}
+                    {submittedData.trackObj.code} — {submittedData.trackObj.title}
                   </dd>
                 </div>
                 <div>
